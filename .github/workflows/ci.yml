@@ -1,0 +1,20 @@
+name: Build C++ Calculator
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install g++
+      run: sudo apt-get update && sudo apt-get install -y g++
+
+    - name: Compile calculator
+      run: g++ calculator.cpp -o calculator
+
+    - name: Run calculator (optional)
+      run: ./calculator
