@@ -1,40 +1,23 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Calculator{
-	public:
-	int a;
-	int b;
-	
-	Calculator(int x, int y) : a(x), b(y){
-		
-	}
-	
-	void Addition () {
-		cout << "Sum of a+b: " << a+b << endl;
-	}
-	
-	void Subtraction () {
-		cout << "Subtraction of a-b : " << a-b << endl;
-	}
-	
-	void Multiplication () {
-		cout << "Multiplication of a*b : " << a*b <<endl;
-	}
-	
-	void Division () {
-		cout << "Division of a/b : " << a/b << endl;
-	}
-};
+class Calculator {
+public:
+    int a, b;
 
-int main () {
-	cout << "Welcome to Calculator " << endl;
+    Calculator(int x, int y) : a(x), b(y) {
 	
-	Calculator cal(5,6);
-	cal.Addition();
-	cal.Subtraction();
-	cal.Multiplication();
-	cal.Division();
-	return 0;
-}
+	}
+
+    int addition() { return a + b; }
+    int subtraction() { return a - b; }
+    int multiplication() { return a * b; }
+    int division() {
+        if (b == 0) {
+            cout << "Error: Division by zero" << endl;
+            return 0;
+        }
+        return a / b;
+    }
+};
 
