@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "Calculator.cpp"  // Include your calculator code
+#include "calculator.cpp"  // Include your calculator code
 
 using namespace std;
 
