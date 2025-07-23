@@ -1,17 +1,21 @@
 #include <iostream>
 #include <cassert>
-#include "calculator.cpp"  // Include your calculator code
+#include "calculator.cpp"  // assuming Calculator class is in this file
 
 using namespace std;
 
 int main() {
-    Calculator cal(10, 5);
+    // Creating a calculator object with sample values
+    Calculator calc(10, 5);
 
-    assert(cal.addition() == 15);
-    assert(cal.subtraction() == 5);
-    assert(cal.multiplication() == 50);
-    assert(cal.division() == 2);
+    // Running simple test cases
+    assert(calc.addition() == 15);          
+    assert(calc.subtraction() == 5);       
+    assert(calc.multiplication() == 50);   
+    assert(calc.division() == 2);          
 
-    cout << "All tests passed!" << endl;
+    cout << "All basic tests passed successfully." << endl;
+
     return 0;
 }
+
